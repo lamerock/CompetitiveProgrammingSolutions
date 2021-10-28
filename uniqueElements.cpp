@@ -60,6 +60,17 @@ int main()
         }
     }
     
+    int temp;
+    for(int i = 0; i<counter; i++) {
+        for(int j = i+1; j<counter; j++){
+            if(uniqueElements[j] < uniqueElements[i]) {
+                temp = uniqueElements[i];
+                uniqueElements[i] = uniqueElements[j];
+                uniqueElements[j] = temp;
+            }
+        }
+    }
+    
     cout << "Unique Characters: ";
     for (int i = 0; i < counter; i++){
         cout << uniqueElements[i] << " ";
